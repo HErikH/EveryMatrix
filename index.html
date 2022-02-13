@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./icons/css/all.css">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="./pictures/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <img class="burger__icon" src="./pictures/menuicon.png" alt="Burger-picture">
+        <img class="language__flag" src="./pictures/language.png" alt="language-picture">
+        <div class="User__bar">
+            <img src="./pictures/User.png" alt="User-picture">
+            <p class="hello__user__text">
+                Hello, Max!
+            </p>
+            <p class="last__login__text">
+                Last login: Thu Mar 20 2014
+            </p>
+            <i class="fas fa-caret-down"></i>
+        </div>
+    </header>
+    
+    <div id="sidebar">
+        <img src="./pictures/logo.png" alt="Logo-picture" class="logo">
+        <ul class="sidebar__menu">
+            <li class="sidebar__icons">
+                <i class="fas fa-tachometer-alt"></i>
+            </li>
+            <li class="sidebar__icons">
+                <i class="fas fa-key-skeleton"></i>
+            </li>
+            <li class="sidebar__icons">
+                <i class="fas fa-user"></i>
+            </li>
+            <li class="sidebar__icons">
+                <i class="fas fa-bullhorn"></i>
+            </li>
+            <li class="sidebar__icons">
+                <i class="fas fa-chart-area"></i>
+            </li>
+            <li class="sidebar__icons">
+                <i class="fas fa-exchange"></i>
+            </li>
+            <li class="sidebar__icons">
+                <i class="fas fa-cog"></i>
+            </li>
+        </ul>
+        <ul class="sidebar__couple">
+            <li class="sidebar__couple__icons">
+                <i class="fas fa-heart"></i>
+            </li>
+            <li class="sidebar__couple__icons">
+                <i class="far fa-clock"></i>
+            </li>
+            <li class="sidebar__couple__icons">
+                <i class="fas fa-eye"></i>
+            </li>
+        </ul>
+        <p class="sidebar__undertext">
+            #171717
+        </p>
+    </div>
+    <div id="sidebar-collapse">
+        <i id="collapse-icon" class="far fa-angle-right"></i>
+        <i id="collapse-icon-left" class='far fa-angle-left'></i>
+    </div>
+    <div id="dashboard">
+        <p class="dashboard__text">
+            Dashboard
+        </p>
+        <div class="add__page">
+            <i class="fas fa-heart"></i>
+            <label class="add__page__text">
+                ADD THIS PAGE TO FAVORITES
+            </label>
+        </div>
+    </div>
+    <ul id="info-table">
+        <li class="signups">
+            <img src="./pictures/sign__bg.png" class="result__bg sign__bg">
+            <p class="num25 result">
+                25
+            </p>
+            <p class="signups__text result--text">
+                <i class="fas fa-check"></i>
+                SIGNUPS
+            </p>
+            <div class="lines line__1"></div>
+        </li>
+        <li class="profit">
+            <img src="./pictures/profit__bg.png" class="result__bg profit__bg">
+            <p class="num1000 result">
+                $1000
+            </p>
+            <p class="profit__text result--text">
+                <i class="fas fa-chart-line"></i>
+                PROFIT
+            </p>
+            <div class="lines line__2"></div>
+        </li>
+        <li class="commissions">
+            <img src="./pictures/comis__bg.png" class="result__bg comis__bg">
+            <p class="num350 result">
+                $350
+            </p>
+            <p class="comis__text result--text">
+                <i class="far fa-money-bill-alt"></i>
+                COMMISSIONS
+            </p>
+            <div class="lines line__3"></div>
+        </li>
+        <li class="pendingcommission">
+            <img src="./pictures/pending__bg.png" class="result__bg pending__bg">
+            <p class="num300 result">
+                $300
+            </p>
+            <p class="pending__text result--text">
+                <i class="fas fa-question-circle"></i>
+                PENDINGCOMMISSION
+            </p>
+        </li>
+    </ul>
+    <div id="graphs">
+        <div class="line__graph">
+           <canvas id="line"></canvas> 
+        </div>
+        <div class="doughnut__graph">
+           <p class="doughnut__title">Active Medias</p>
+           <label class="doughnut__bg">50</label>
+           <canvas id="doughnut"></canvas> 
+           <ul class="element__list">
+               <li class="elements">CTR</li>
+               <li class="elements">
+                Total Views
+               </li>
+               <li class="elements">
+                Total Clicks
+               </li>
+               <li class="elements">
+                Signups
+               </li>
+           </ul>
+           <ul class="values__list">
+               <li class="value">25%</li>
+               <li class="value">200</li>
+               <li class="value">65</li>
+               <li class="value">22</li>
+           </ul>
+        </div>
+        <div class="geographic__graph">
+           <p class="geographic__title">Geographic Data</p>
+           <p class="last__month">
+            Last Month
+            <i class="far fa-angle-down"></i>
+           </p>
+           <div class="cubes">
+               <div class="cube"></div>
+               <div class="cube"></div>
+           </div>
+            <img src="./pictures/mapselected.png" class="map__selected">
+            <img src="./pictures/map.png" class="map__picture">
+            <p class="affiliate ">
+            Affiliate Sign Ups
+            <i class="far fa-angle-down"></i>
+            </p>
+            <div class="lines__bg">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="country__list">
+                <li class="country">1. United States</li>
+                <li class="country">2. China</li>
+                <li class="country">3. United Kingdom</li>
+            </ul>
+            <ul class="values__list">
+                <li class="value">200</li>
+                <li class="value">65</li>
+                <li class="value">22</li>
+            </ul>
+        </div>
+    </div>
+    <ul id="result-titles">
+        <li class="title">Top Affiliates</li>
+        <li class="title">Signups</li>
+        <li class="title">Pending Commissions</li>
+    </ul>
+    <table id="users-info">
+        <tr>
+            <th class="info__title">ID</th>
+            <th class="info__title">Username</th>
+            <th class="info__title">Profit($)</th>
+            <th class="info__title">Cornission($)</th>
+            <th class="info__title">View</th>
+            <th class="info__title">ID</th>
+            <th class="info__title">Username</th>
+            <th class="info__title">Profit($)</th>
+            <th class="info__title">Cornission($)</th>
+            <th class="info__title">View</th>
+            <th class="info__title">ID</th>
+            <th class="info__title">Username</th>
+            <th class="info__title">Profit($)</th>
+            <th class="info__title">Cornission($)</th>
+            <th class="info__title">View</th>
+        </tr>
+        <tr>
+            <td class="info">1007</td>
+            <td class="info">Simona</td>
+            <td class="info">55</td>
+            <td class="info">Simona</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+            <td class="info">1007</td>
+            <td class="info">Simona</td>
+            <td class="info">55</td>
+            <td class="info">Simona</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+            <td class="info">1007</td>
+            <td class="info">Simona</td>
+            <td class="info">55</td>
+            <td class="info">Simona</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+        </tr>
+        <tr>
+            <td class="info">1008</td>
+            <td class="info">Ariana</td>
+            <td class="info">45</td>
+            <td class="info">Adelina</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+            <td class="info">1008</td>
+            <td class="info">Ariana</td>
+            <td class="info">45</td>
+            <td class="info">Adelina</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+            <td class="info">1008</td>
+            <td class="info">Ariana</td>
+            <td class="info">45</td>
+            <td class="info">Adelina</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+        </tr>
+        <tr>
+            <td class="info">1009</td>
+            <td class="info">Adam</td>
+            <td class="info">35</td>
+            <td class="info">Adam</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+            <td class="info">1009</td>
+            <td class="info">Adam</td>
+            <td class="info">35</td>
+            <td class="info">Adam</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+            <td class="info">1009</td>
+            <td class="info">Adam</td>
+            <td class="info">35</td>
+            <td class="info">Adam</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+        </tr>
+        <tr>
+            <td class="info">1010</td>
+            <td class="info">John</td>
+            <td class="info">25</td>
+            <td class="info">John</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+            <td class="info">1010</td>
+            <td class="info">John</td>
+            <td class="info">25</td>
+            <td class="info">John</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+            <td class="info">1010</td>
+            <td class="info">John</td>
+            <td class="info">25</td>
+            <td class="info">John</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+        </tr>
+        <tr>
+            <td class="info">1011</td>
+            <td class="info">Garry</td>
+            <td class="info">15</td>
+            <td class="info">Garry</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+            <td class="info">1011</td>
+            <td class="info">Garry</td>
+            <td class="info">15</td>
+            <td class="info">Garry</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+            <td class="info">1011</td>
+            <td class="info">Garry</td>
+            <td class="info">15</td>
+            <td class="info">Garry</td>
+            <td class="info">
+                <i class="fas fa-bars"></i>
+            </td>
+        </tr>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
