@@ -397,6 +397,11 @@ header {
   margin-left: 2rem;
   border-collapse: collapse;
   width: 82rem;
+  tr {
+    :nth-child(5),:nth-child(10) {
+      border-right:1.5px solid #d4d4d4;
+    }
+  }
   .info__title {
     color: #636363;
     font-size: 17px;
